@@ -25,3 +25,5 @@ dist/
 *.pfx
 data/*.db*
 examples/.run_db/
+examples/history/
+openspec/

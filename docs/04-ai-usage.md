@@ -12,7 +12,7 @@
 
 | 范围 | AI 产物与采用理由 | 对应文件 |
 | --- | --- | --- |
-| 需求与设计 | 整合三份需求，生成提案、能力规格、设计与任务清单，便于逐条验收 | `openspec/changes/build-material-review-scheduling-agent/` |
+| 需求与设计 | 整合三份需求，先规格后实现；设计材料仅本地保留，不纳入公开仓 | 过程材料（未提交） |
 | Agent 与模型 | 原生 ReAct、OpenAI 兼容客户端、observation 驱动 Mock、系统提示词与预算 | `agent.py`、`llm.py`、`prompts.py` |
 | 业务与持久化 | 六工具、审核规则、合成库、事务与幂等键 | `tools.py`、`storage.py`、`data/review_rules.json`、`scripts/seed_db.py` |
 | 结构与护栏 | Pydantic 契约、可信确认、保存前/finish 校验、保存快照 | `schemas.py`、`context.py`、`guards.py` |

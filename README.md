@@ -56,7 +56,7 @@ LLM_PROVIDER=real bash scripts/run_all_cases.sh --cases slot_conflict_hard rule_
 
 跟进验证包含16项批量、运行中规则变化和接口契约测试。原生SDK契约测试为离线模拟，当前真实接口还通过省略可选参数模式；不代表其他厂商均已实测。见[跟进报告](docs/06-followup-validation.md)。
 
-选择slot_conflict或duplicate会自动一起运行以验证同库幂等。选择性复跑合并报告；覆盖前的输出和Trace存入examples/history/，不会把失败历史改成成功。
+选择slot_conflict或duplicate会自动一起运行以验证同库幂等。选择性复跑合并报告；覆盖前会先归档本地历史输出（不纳入仓库提交），不会把失败历史改成成功。
 
 ## 输入、结果与业务规则
 
@@ -76,8 +76,7 @@ soft冲突可保存待确认建议；hard改时必须有绑定素材与精确候
 - [复盘前三项跟进](docs/06-followup-validation.md)
 - [用例实际结果及证据索引](examples/results.md)
 - [AI与人工参与记录](docs/04-ai-usage.md)、[项目复盘](docs/05-retrospective.md)
-- 根目录保留原选题及考试说明；面向评审的需求映射见 docs/01
-- [OpenSpec设计](openspec/changes/build-material-review-scheduling-agent/design.md)、[实施任务](openspec/changes/build-material-review-scheduling-agent/tasks.md)
+- 面向评审的需求映射见 docs/01
 
 依赖固定于requirements.txt，.env被忽略，不提交密钥。数据库由scripts/seed_db.py生成，不提交app.db。规范化SHA-256、SQLite事务及唯一约束保证相同业务请求和排期事实只存一份草稿。草稿不预占schedule，保存后排期可能变化，后续执行前须再次查槽。
 

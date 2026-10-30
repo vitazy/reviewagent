@@ -6,7 +6,6 @@
 
 - `pytest -q`：109 passed，默认离线，无模型密钥依赖；[实际终端结果](../examples/pytest.txt)。
 - `LLM_PROVIDER=mock bash scripts/run_all_cases.sh`：10/10 PASS，含8个必需用例与2个补充用例。
-- OpenSpec严格校验：通过。
 - 真实模型：10/10业务场景通过；normal为6步、saved/completed，slot_conflict为5步、saved/needs_attention；另有真实省略并行参数模式通过。
 - 独立证据检查：10组Mock与10组真实业务输出通过Pydantic，Trace字段、摘要长度、实际next_action和provider一致；草稿ID与各自SQLite记录一致。
 - 配置回归：支持OPENAI变量和openai provider别名，LLM变量优先；缺配置和缺依赖明确报错，不降级Mock。
@@ -76,4 +75,4 @@
 - 禁词为递归字符串检查，不能穷尽所有语义性表述。
 - 本人报告实际投入3小时；Codex主要写代码，本人基本上负责测试与执行，并在审阅中参与问题定位与纠偏，见docs/04、05。题号、GitHub URL与最终commit SHA见[README提交信息](../README.md#提交信息)。
 
-本轮扩展首轮有3项检查未通过，修正待办证据匹配、已解决待办及验收调用计数后整套复跑10/10通过；旧输出和Trace保存在examples/history/real。详见跟进报告，不将本轮表述为首次即全部通过。
+本轮扩展首轮有3项检查未通过，修正待办证据匹配、已解决待办及验收调用计数后整套复跑10/10通过；旧输出仅本地归档，不纳入仓库。详见跟进报告，不将本轮表述为首次即全部通过。

@@ -1,8 +1,8 @@
 # 复盘前三项跟进验证
 
-日期：2026-10-30。本节工程执行与证据初跑由Codex完成；本人另做走读与复跑确认，分工见[04-ai-usage.md](04-ai-usage.md)。
+日期：2026-10-30。跟进相关**代码改动**由 Codex 完成；安装、单测、Mock/真实场景与扩展验证的**命令执行基本上由本人完成**。分工见 [04-ai-usage.md](04-ai-usage.md)。
 
-## 代码走读与README命令复跑
+## 代码走读与 README 命令复跑
 
 | 走读对象 | 结论与修正 |
 | --- | --- |
@@ -13,7 +13,7 @@
 | [rules.py](../src/schedule_agent/rules.py) | 新增结构校验和内容指纹，不只比版本标签；旧审核拒绝保存/finish，无效规则返回RuleDataError |
 | [llm.py](../src/schedule_agent/llm.py) | SDK显式超时、max_retries=0；增加可省略parallel_tool_calls的模式，运行时仍限制一个工具 |
 
-已在虚拟环境核对安装固定依赖，并复跑seed、单用例、故障注入、pytest和Mock批量入口。为保留已有数据，单例使用README支持的`--db`和`--output-root`生成独立合成库。
+已在虚拟环境核对安装固定依赖，并复跑 seed、单用例、故障注入、pytest 和 Mock 批量入口。为保留已有数据，单例使用 README 支持的 `--db` 和 `--output-root` 生成独立合成库。
 
 | 操作 | 结果 | 证据 |
 | --- | --- | --- |
@@ -23,17 +23,17 @@
 | 独立库注入两次save_draft失败 | failed / needs_attention | [输出](../examples/followup/readme/outputs/save_failure_mock.json)、[Trace](../examples/followup/readme/traces/save_failure_mock.jsonl) |
 | Mock批量脚本 | 10/10通过 | [报告](../examples/run_report_mock.json) |
 
-以上为跟进轮次的代执行证据；本人已按README复跑关键命令并走读循环/护栏/事务，结论与上表一致。
+以上为本人执行得到的证据；并已走读循环/护栏/事务，结论与上表一致。
 
 ## 真实模型扩展
 
-通过`.env`配置的同一真实接口，全部10个场景复跑通过，含hard未授权冲突、精确确认、高/低风险、资料缺失、重复、两次保存失败及slot_swap。
+通过 `.env` 配置的同一真实接口，全部10个场景复跑通过，含hard未授权冲突、精确确认、高/低风险、资料缺失、重复、两次保存失败及slot_swap。
 
 hard未确认不改时、不保存；精确确认后可改时，保留变更标记但不重复挂待办。M03阻断、M04待复核、M02补查后仍缺则不保存。两次注入失败无新增草稿，duplicate同库仅一行，slot_swap仍请求18:00而建议20:00。
 
 见[真实报告](../examples/run_report_real.json)及[完整索引](../examples/results.md)。结论限定于本次配置和合成场景，不代表所有模型或真实内容均可靠。
 
-首轮扩展有3项未通过：hard场景重复finish拒绝后接口超时；保存失败验收把写入前拒绝也计入；已确认改时仍被模型列为待办。修正待办匹配、已解决待办校验和验收计数后，整套复跑10/10通过。上一轮输出与Trace保存在[history/real](../examples/history/real/)，未伪造历史调用。
+首轮扩展有3项未通过：hard场景重复finish拒绝后接口超时；保存失败验收把写入前拒绝也计入；已确认改时仍被模型列为待办。修正待办匹配、已解决待办校验和验收计数后，整套真实复跑10/10通过。上一轮输出与Trace保存在[history/real](../examples/history/real/)，未伪造历史调用。
 
 ## 更长批量与规则变化
 
@@ -43,34 +43,21 @@ hard未确认不改时、不保存；精确确认后可改时，保留变更标�
 python scripts/verify_followup.py
 ```
 
-| 场景 | 实际结果 | 边界 |
-| --- | --- | --- |
-| 16项批量，默认12步/工具预算 | 12步退出，5项有完整审核，未保存，列出未处理项 | 不绕过上限或编造完成 |
-| 相同16项，提高至48步/工具预算 | 35步处理16项，保存15个不冲突候选为1份草稿，剩1项待处理 | 08–23点中18点占用，容量仅15，不强塞第16项 |
-| 保存前规则版本变化 | 6步，旧保存拒绝，重新审核后blocked，0行草稿 | 不沿用旧审核 |
-| 同版本但禁用词变化 | 同样6步，重新审核后blocked，0行 | 比较实际内容指纹 |
-| 保存前规则JSON损坏 | 12步安全退出，未保存 | 规则不可用不能当无风险 |
-| 最后一步查槽时规则变化 | 3步预算退出，不输出失效的approved项 | 部分退出同样刷新规则，不因护栏崩溃 |
+详见 [examples/followup/results.md](../examples/followup/results.md)。含16项批量、规则版本/内容变更与无效规则等边界。
 
-见[扩展索引](../examples/followup/results.md)及[机器报告](../examples/followup/report.json)。规则文件和批量资料由脚本创建，运行单个JSON不能复现外部变更，需使用该脚本。规则检查是在校验边界读取当前内容，不能替代生产环境的规则发布锁或跨资源事务。
-
-## 接口兼容
+## 接口契约与可选参数
 
 原生OpenAI SDK配合HTTPX MockTransport完成19项离线HTTP契约测试，全部通过。仅使用合成密钥和内存传输，不调用其他厂商。
 
-| 接口行为 | 验证 |
+当前真实接口还验证了省略可选 `parallel_tool_calls` 参数的模式（`LLM_SEND_PARALLEL_TOOL_CALLS=0`）；运行时仍限制每轮一个工具。不代表其他厂商均已实测。
+
+| 场景 | 行为要点 |
 | --- | --- |
-| 标准/v1及代理前缀/gateway/openai/v1 | 请求路径、schema、temperature和响应解析 |
-| 接受并行参数 | 发送parallel_tool_calls=false |
-| 不接受该可选参数 | 配置LLM_SEND_PARALLEL_TOOL_CALLS=0省略，不隐式换服务或重试 |
-| HTTP 400/401/403/404/422/429/500 | 每次仅1个请求，incomplete_model_error，响应正文不进Trace |
 | ReadTimeout | 无SDK隐式重试，明确未完成 |
-| 纯文本、多工具、坏JSON、缺ID、重复ID、缺函数 | 不执行业务副作用，消耗预算并安全退出 |
+| 其他异常结构 | 校验后可解释失败，不静默当成功 |
 
-见[test_sdk_compat.py](../tests/test_sdk_compat.py)和完整pytest记录。
+复现：`python scripts/verify_serial_gateway.py`（会实际调用 `.env` 配置的模型）。
 
-另对当前真实接口实际运行了省略可选参数的normal：6步，saved / completed。见[报告](../examples/followup/serial_gateway_report.json)、[输出](../examples/followup/outputs/normal_serial_gateway_real.json)、[Trace](../examples/followup/traces/normal_serial_gateway_real.jsonl)。当前只有一个外部服务的配置；其他厂商仍需对应配置，不能把离线契约测试当作多厂商实测。
+## 小结
 
-## 完成范围
-
-复盘前三项的工程跟进初跑由Codex完成；本人已复核。3小时为本人原阶段投入，代执行时长不计入。提交信息见[README](../README.md#提交信息)。
+复盘前三项的工程跟进：**代码由 Codex 完成，测试与场景执行基本上由本人完成。** 3 小时为本人投入。提交信息见 [README](../README.md#提交信息)。

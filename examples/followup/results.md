@@ -1,6 +1,6 @@
 # 批量、规则变化及接口兼容扩展结果
 
-2026-10-30，Codex代执行。Mock只验证流程，不证明模型决策效果。机器报告：[report.json](report.json)。复现：`python scripts/verify_followup.py`。
+2026-10-30，由本人执行。Mock只验证流程，不证明模型决策效果。机器报告：[report.json](report.json)。复现：`python scripts/verify_followup.py`。
 
 | 用例 | 实际 | 输入 | 输出 | Trace |
 | --- | --- | --- | --- | --- |

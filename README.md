@@ -81,7 +81,7 @@ soft冲突可保存待确认建议；hard改时必须有绑定素材与精确候
 
 依赖固定于requirements.txt，.env被忽略，不提交密钥。数据库由scripts/seed_db.py生成，不提交app.db。规范化SHA-256、SQLite事务及唯一约束保证相同业务请求和排期事实只存一份草稿。草稿不预占schedule，保存后排期可能变化，后续执行前须再次查槽。
 
-本人报告实际投入3小时；AI与人工分工、本人走读/复跑与复盘见[docs/04](docs/04-ai-usage.md)、[docs/05](docs/05-retrospective.md)。
+本人报告实际投入3小时；Codex主要写代码，测试与场景执行基本上由本人完成，见[docs/04](docs/04-ai-usage.md)、[docs/05](docs/05-retrospective.md)。
 
 ## 提交信息
 

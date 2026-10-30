@@ -1,0 +1,27 @@
+{
+  "items": [
+    {
+      "asset_id": "M02",
+      "review_status": "needs_info",
+      "risk_reasons": [
+        "缺少必填字段：title,copyright_status"
+      ],
+      "requested_time": "2026-10-30T19:00:00+08:00",
+      "suggested_time": null,
+      "needs_confirmation": false,
+      "confirmation_reason": null
+    }
+  ],
+  "draft_status": "not_saved",
+  "draft_id": null,
+  "status": "needs_attention",
+  "pending_items": [
+    {
+      "asset_id": "M02",
+      "kind": "needs_info",
+      "message": "素材缺少必填字段 title、copyright_status，补全后需重新审核，暂不排期。",
+      "proposed_time": null,
+      "risk_codes": []
+    }
+  ]
+}

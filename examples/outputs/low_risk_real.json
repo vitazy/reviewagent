@@ -1,0 +1,29 @@
+{
+  "items": [
+    {
+      "asset_id": "M04",
+      "review_status": "approved",
+      "risk_reasons": [
+        "边界风险，需要人工复核"
+      ],
+      "requested_time": "2026-10-30T19:00:00+08:00",
+      "suggested_time": "2026-10-30T19:00:00+08:00",
+      "needs_confirmation": true,
+      "confirmation_reason": "低风险边界题材（manual_review）待人工复核确认，排期沿用原请求时间"
+    }
+  ],
+  "draft_status": "saved",
+  "draft_id": "D-6d3609eb3ac24988",
+  "status": "needs_attention",
+  "pending_items": [
+    {
+      "asset_id": "M04",
+      "kind": "risk_confirmation",
+      "message": "M04为边界题材，需人工复核确认后再定稿；草稿已保存，未对外发布。",
+      "proposed_time": null,
+      "risk_codes": [
+        "manual_review"
+      ]
+    }
+  ]
+}

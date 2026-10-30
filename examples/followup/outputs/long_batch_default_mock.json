@@ -1,0 +1,166 @@
+{
+  "items": [
+    {
+      "asset_id": "B01",
+      "review_status": "approved",
+      "risk_reasons": [],
+      "requested_time": "2026-10-30T08:00:00+08:00",
+      "suggested_time": "2026-10-30T08:00:00+08:00",
+      "needs_confirmation": false,
+      "confirmation_reason": null
+    },
+    {
+      "asset_id": "B02",
+      "review_status": "approved",
+      "risk_reasons": [],
+      "requested_time": "2026-10-30T08:00:00+08:00",
+      "suggested_time": "2026-10-30T09:00:00+08:00",
+      "needs_confirmation": true,
+      "confirmation_reason": "时间有调整；待确认"
+    },
+    {
+      "asset_id": "B03",
+      "review_status": "approved",
+      "risk_reasons": [],
+      "requested_time": "2026-10-30T08:00:00+08:00",
+      "suggested_time": "2026-10-30T10:00:00+08:00",
+      "needs_confirmation": true,
+      "confirmation_reason": "时间有调整；待确认"
+    },
+    {
+      "asset_id": "B04",
+      "review_status": "approved",
+      "risk_reasons": [],
+      "requested_time": "2026-10-30T08:00:00+08:00",
+      "suggested_time": "2026-10-30T11:00:00+08:00",
+      "needs_confirmation": true,
+      "confirmation_reason": "时间有调整；待确认"
+    },
+    {
+      "asset_id": "B05",
+      "review_status": "approved",
+      "risk_reasons": [],
+      "requested_time": "2026-10-30T08:00:00+08:00",
+      "suggested_time": "2026-10-30T12:00:00+08:00",
+      "needs_confirmation": true,
+      "confirmation_reason": "时间有调整；待确认"
+    }
+  ],
+  "draft_status": "not_saved",
+  "draft_id": null,
+  "status": "incomplete_step_limit",
+  "pending_items": [
+    {
+      "asset_id": "B02",
+      "kind": "time_confirmation",
+      "message": "建议时间变更待确认",
+      "proposed_time": "2026-10-30T09:00:00+08:00",
+      "risk_codes": []
+    },
+    {
+      "asset_id": "B03",
+      "kind": "time_confirmation",
+      "message": "建议时间变更待确认",
+      "proposed_time": "2026-10-30T10:00:00+08:00",
+      "risk_codes": []
+    },
+    {
+      "asset_id": "B04",
+      "kind": "time_confirmation",
+      "message": "建议时间变更待确认",
+      "proposed_time": "2026-10-30T11:00:00+08:00",
+      "risk_codes": []
+    },
+    {
+      "asset_id": "B05",
+      "kind": "time_confirmation",
+      "message": "建议时间变更待确认",
+      "proposed_time": "2026-10-30T12:00:00+08:00",
+      "risk_codes": []
+    },
+    {
+      "asset_id": "B06",
+      "kind": "unprocessed",
+      "message": "尚未取得完整审核证据",
+      "proposed_time": null,
+      "risk_codes": []
+    },
+    {
+      "asset_id": "B07",
+      "kind": "unprocessed",
+      "message": "尚未取得完整审核证据",
+      "proposed_time": null,
+      "risk_codes": []
+    },
+    {
+      "asset_id": "B08",
+      "kind": "unprocessed",
+      "message": "尚未取得完整审核证据",
+      "proposed_time": null,
+      "risk_codes": []
+    },
+    {
+      "asset_id": "B09",
+      "kind": "unprocessed",
+      "message": "尚未取得完整审核证据",
+      "proposed_time": null,
+      "risk_codes": []
+    },
+    {
+      "asset_id": "B10",
+      "kind": "unprocessed",
+      "message": "尚未取得完整审核证据",
+      "proposed_time": null,
+      "risk_codes": []
+    },
+    {
+      "asset_id": "B11",
+      "kind": "unprocessed",
+      "message": "尚未取得完整审核证据",
+      "proposed_time": null,
+      "risk_codes": []
+    },
+    {
+      "asset_id": "B12",
+      "kind": "unprocessed",
+      "message": "尚未取得完整审核证据",
+      "proposed_time": null,
+      "risk_codes": []
+    },
+    {
+      "asset_id": "B13",
+      "kind": "unprocessed",
+      "message": "尚未取得完整审核证据",
+      "proposed_time": null,
+      "risk_codes": []
+    },
+    {
+      "asset_id": "B14",
+      "kind": "unprocessed",
+      "message": "尚未取得完整审核证据",
+      "proposed_time": null,
+      "risk_codes": []
+    },
+    {
+      "asset_id": "B15",
+      "kind": "unprocessed",
+      "message": "尚未取得完整审核证据",
+      "proposed_time": null,
+      "risk_codes": []
+    },
+    {
+      "asset_id": "B16",
+      "kind": "unprocessed",
+      "message": "尚未取得完整审核证据",
+      "proposed_time": null,
+      "risk_codes": []
+    },
+    {
+      "asset_id": null,
+      "kind": "budget_exhausted",
+      "message": "MAX_TOOL_CALLS预算耗尽，未完成项需继续处理",
+      "proposed_time": null,
+      "risk_codes": []
+    }
+  ]
+}

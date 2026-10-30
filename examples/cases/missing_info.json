@@ -1,0 +1,18 @@
+{
+  "case_id": "missing_info",
+  "request": {
+    "asset_ids": [
+      "M02"
+    ],
+    "channel": "video",
+    "requested_times": {
+      "M02": {
+        "time": "2026-10-30T19:00:00+08:00",
+        "type": "soft"
+      }
+    },
+    "confirmations": []
+  },
+  "fixture": "base",
+  "preset_answers": []
+}

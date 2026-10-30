@@ -1,0 +1,17 @@
+{
+  "items": [
+    {
+      "asset_id": "M01",
+      "review_status": "approved",
+      "risk_reasons": [],
+      "requested_time": "2026-10-30T19:00:00+08:00",
+      "suggested_time": "2026-10-30T19:00:00+08:00",
+      "needs_confirmation": false,
+      "confirmation_reason": null
+    }
+  ],
+  "draft_status": "saved",
+  "draft_id": "D-8ee8fdb125654094",
+  "status": "completed",
+  "pending_items": []
+}

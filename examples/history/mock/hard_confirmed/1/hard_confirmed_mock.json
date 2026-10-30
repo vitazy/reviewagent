@@ -1,0 +1,17 @@
+{
+  "items": [
+    {
+      "asset_id": "M01",
+      "review_status": "approved",
+      "risk_reasons": [],
+      "requested_time": "2026-10-30T18:00:00+08:00",
+      "suggested_time": "2026-10-30T19:00:00+08:00",
+      "needs_confirmation": true,
+      "confirmation_reason": "时间有调整；已确认"
+    }
+  ],
+  "draft_status": "saved",
+  "draft_id": "D-dd5397725ffb4a0a",
+  "status": "completed",
+  "pending_items": []
+}

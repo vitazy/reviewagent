@@ -1,0 +1,13 @@
+{
+  "version": "synthetic-v1",
+  "required_fields": ["title", "copyright_status"],
+  "prohibited_words": ["违规推广", "违法交易"],
+  "copyright_required": "licensed",
+  "risk_actions": {"none": "allow", "low": "pending_confirmation", "high": "block"},
+  "risk_reasons": {
+    "prohibited_word": "内容命中禁用词",
+    "unauthorized_music": "音乐未获授权",
+    "copyright_unlicensed": "版权未获授权",
+    "manual_review": "边界风险，需要人工复核"
+  }
+}

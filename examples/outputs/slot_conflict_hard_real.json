@@ -1,0 +1,25 @@
+{
+  "items": [
+    {
+      "asset_id": "M01",
+      "review_status": "approved",
+      "risk_reasons": [],
+      "requested_time": "2026-10-30T18:00:00+08:00",
+      "suggested_time": null,
+      "needs_confirmation": true,
+      "confirmation_reason": "hard 请求时段 2026-10-30T18:00:00+08:00 在 video 渠道不可用，已提出改到 2026-10-30T19:00:00+08:00 的确认请求，尚未获得确认"
+    }
+  ],
+  "draft_status": "not_saved",
+  "draft_id": null,
+  "status": "needs_attention",
+  "pending_items": [
+    {
+      "asset_id": "M01",
+      "kind": "time_confirmation",
+      "message": "hard 请求时段不可用，改到 2026-10-30T19:00:00+08:00 待人工确认；确认前保持原时段且不保存草稿",
+      "proposed_time": "2026-10-30T19:00:00+08:00",
+      "risk_codes": []
+    }
+  ]
+}

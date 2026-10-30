@@ -1,0 +1,62 @@
+[
+  {
+    "case_id": "long_batch_default",
+    "provider": "mock",
+    "passed": true,
+    "status": "incomplete_step_limit",
+    "draft_status": "not_saved",
+    "steps": 12,
+    "items": 5,
+    "draft_rows": 0
+  },
+  {
+    "case_id": "long_batch_raised",
+    "provider": "mock",
+    "passed": true,
+    "status": "needs_attention",
+    "draft_status": "saved",
+    "steps": 35,
+    "items": 16,
+    "draft_rows": 1
+  },
+  {
+    "case_id": "rules_changed_version",
+    "provider": "mock",
+    "passed": true,
+    "status": "needs_attention",
+    "draft_status": "not_saved",
+    "steps": 6,
+    "items": 1,
+    "draft_rows": 0
+  },
+  {
+    "case_id": "rules_changed_content",
+    "provider": "mock",
+    "passed": true,
+    "status": "needs_attention",
+    "draft_status": "not_saved",
+    "steps": 6,
+    "items": 1,
+    "draft_rows": 0
+  },
+  {
+    "case_id": "rules_invalid",
+    "provider": "mock",
+    "passed": true,
+    "status": "incomplete_step_limit",
+    "draft_status": "not_saved",
+    "steps": 12,
+    "items": 0,
+    "draft_rows": 0
+  },
+  {
+    "case_id": "rules_changed_at_budget",
+    "provider": "mock",
+    "passed": true,
+    "status": "incomplete_step_limit",
+    "draft_status": "not_saved",
+    "steps": 3,
+    "items": 0,
+    "draft_rows": 0
+  }
+]

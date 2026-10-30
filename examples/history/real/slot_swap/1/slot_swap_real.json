@@ -1,0 +1,25 @@
+{
+  "items": [
+    {
+      "asset_id": "M01",
+      "review_status": "approved",
+      "risk_reasons": [],
+      "requested_time": "2026-10-30T18:00:00+08:00",
+      "suggested_time": "2026-10-30T20:00:00+08:00",
+      "needs_confirmation": true,
+      "confirmation_reason": "原请求时段 2026-10-30T18:00:00+08:00 在 video 渠道不可用（soft 冲突），建议改用同日后续可用整点 20:00，待人工确认"
+    }
+  ],
+  "draft_status": "saved",
+  "draft_id": "D-7645f5854fe44b0b",
+  "status": "needs_attention",
+  "pending_items": [
+    {
+      "asset_id": "M01",
+      "kind": "time_confirmation",
+      "message": "video 渠道 2026-10-30T18:00:00+08:00 不可用（soft 冲突），草稿已按候选时间 2026-10-30T20:00:00+08:00 记录，需人工确认改时后方可继续",
+      "proposed_time": "2026-10-30T20:00:00+08:00",
+      "risk_codes": []
+    }
+  ]
+}

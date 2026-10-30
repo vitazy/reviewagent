@@ -1,0 +1,26 @@
+{
+  "case_id": "hard_confirmed",
+  "request": {
+    "asset_ids": [
+      "M01"
+    ],
+    "channel": "video",
+    "requested_times": {
+      "M01": {
+        "time": "2026-10-30T18:00:00+08:00",
+        "type": "hard"
+      }
+    },
+    "confirmations": []
+  },
+  "fixture": "base",
+  "preset_answers": [
+    {
+      "asset_id": "M01",
+      "kind": "time_change",
+      "accepted": true,
+      "proposed_time": "2026-10-30T19:00:00+08:00",
+      "risk_codes": []
+    }
+  ]
+}

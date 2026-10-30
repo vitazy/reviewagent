@@ -1,0 +1,62 @@
+[
+  {
+    "case_id": "normal",
+    "provider": "mock",
+    "passed": true,
+    "actual": "PASS：approved / saved / completed；drafts=1，steps=5"
+  },
+  {
+    "case_id": "missing_info",
+    "provider": "mock",
+    "passed": true,
+    "actual": "PASS：needs_info / not_saved / needs_attention；drafts=0，steps=4"
+  },
+  {
+    "case_id": "rule_risk",
+    "provider": "mock",
+    "passed": true,
+    "actual": "PASS：blocked / not_saved / needs_attention；drafts=0，steps=3"
+  },
+  {
+    "case_id": "slot_conflict",
+    "provider": "mock",
+    "passed": true,
+    "actual": "PASS：approved / saved / needs_attention；drafts=1，steps=5"
+  },
+  {
+    "case_id": "slot_conflict_hard",
+    "provider": "mock",
+    "passed": true,
+    "actual": "PASS：approved / not_saved / needs_attention；drafts=0，steps=5"
+  },
+  {
+    "case_id": "duplicate",
+    "provider": "mock",
+    "passed": true,
+    "actual": "PASS：approved / duplicate / needs_attention；drafts=1，steps=5"
+  },
+  {
+    "case_id": "save_failure",
+    "provider": "mock",
+    "passed": true,
+    "actual": "PASS：approved / failed / needs_attention；drafts=0，steps=6"
+  },
+  {
+    "case_id": "slot_swap",
+    "provider": "mock",
+    "passed": true,
+    "actual": "PASS：approved / saved / needs_attention；drafts=1，steps=5"
+  },
+  {
+    "case_id": "low_risk",
+    "provider": "mock",
+    "passed": true,
+    "actual": "PASS：approved / saved / needs_attention；drafts=1，steps=5"
+  },
+  {
+    "case_id": "hard_confirmed",
+    "provider": "mock",
+    "passed": true,
+    "actual": "PASS：approved / saved / completed；drafts=1，steps=6"
+  }
+]

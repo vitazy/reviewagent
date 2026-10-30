@@ -1,0 +1,7 @@
+-e .
+openai==1.109.1
+socksio==1.0.0
+httpx==0.28.1
+pydantic==2.11.7
+python-dotenv==1.1.0
+pytest==8.3.4

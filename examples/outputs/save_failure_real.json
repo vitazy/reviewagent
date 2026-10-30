@@ -1,0 +1,25 @@
+{
+  "items": [
+    {
+      "asset_id": "M01",
+      "review_status": "approved",
+      "risk_reasons": [],
+      "requested_time": "2026-10-30T19:00:00+08:00",
+      "suggested_time": "2026-10-30T19:00:00+08:00",
+      "needs_confirmation": false,
+      "confirmation_reason": null
+    }
+  ],
+  "draft_status": "failed",
+  "draft_id": null,
+  "status": "needs_attention",
+  "pending_items": [
+    {
+      "asset_id": "M01",
+      "kind": "save_failure",
+      "message": "草稿保存两次均故障注入失败，未生成草稿，需人工重试保存",
+      "proposed_time": null,
+      "risk_codes": []
+    }
+  ]
+}

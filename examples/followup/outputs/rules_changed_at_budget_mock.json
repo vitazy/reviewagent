@@ -1,0 +1,29 @@
+{
+  "items": [],
+  "draft_status": "not_saved",
+  "draft_id": null,
+  "status": "incomplete_step_limit",
+  "pending_items": [
+    {
+      "asset_id": "M01",
+      "kind": "rules_changed",
+      "message": "审核规则已变化，已有审核或保存快照需重新核对",
+      "proposed_time": null,
+      "risk_codes": []
+    },
+    {
+      "asset_id": "M01",
+      "kind": "unprocessed",
+      "message": "尚未取得完整审核证据",
+      "proposed_time": null,
+      "risk_codes": []
+    },
+    {
+      "asset_id": null,
+      "kind": "budget_exhausted",
+      "message": "MAX_TOOL_CALLS预算耗尽，未完成项需继续处理",
+      "proposed_time": null,
+      "risk_codes": []
+    }
+  ]
+}

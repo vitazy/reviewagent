@@ -1,0 +1,11 @@
+.env
+.venv/
+.codex/
+private/
+.tools/
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+data/*.db*
+examples/.run_db/

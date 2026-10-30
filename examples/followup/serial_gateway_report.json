@@ -1,0 +1,9 @@
+{
+  "case_id": "normal_serial_gateway",
+  "provider": "real",
+  "passed": true,
+  "profile": "optional_parallel_parameter_omitted",
+  "steps": 6,
+  "status": "completed",
+  "draft_status": "saved"
+}

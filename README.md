@@ -89,5 +89,5 @@ soft冲突可保存待确认建议；hard改时必须有绑定素材与精确候
 | --- | --- |
 | 题号 | 素材审核与发布排期 Agent |
 | GitHub URL | https://github.com/vitazy/reviewagent |
-| 最终 commit SHA | `97a934a2c208200196857c3fc44bea275d9ce91e` |
+| 最终 commit SHA | 以仓库 `main` 分支最新完整 SHA 为准 |
 | 仓库可见性 | 公开（无需额外评审账号授权） |
